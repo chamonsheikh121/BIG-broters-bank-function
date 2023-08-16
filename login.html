@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in B Bank</title>
+    <link rel="shortcut icon" href="IMG_20230322_115717_722 - Copy.jpg" type="image/x-icon">
+    <!-- =======================google fonts =============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- =================tailwind cdn======================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="h-screen bg-gradient-to-br from-blue-500 to-green-500">
+
+    <h1 class="text-6xl font-bold text-center py-10 text-white" text-center>Log in to your <span
+            class="text-purple-400">BIG brother's Bank</span></h1>
+
+    <section>
+        <div
+            class=" border-4 border-white border-solid w-96 text-center mx-auto rounded-lg text-white shadow-2xl shadow-">
+            <h2 class="text-4xl py-6 ">Login</h2>
+            <hr class="border-[2px] ">
+            <div class="text-left p-8">
+                <input type="email"
+                    class="w-full  border-b-4 px-1 pt-4 border-gray-300 border-solid text-[20px] bg-transparent "
+                    name="" id="input-email" placeholder="Username/ Email">
+                <input id="input-password" type="password"
+                    class="w-full border-b-4 px-1 pt-4 border-gray-300 border-solid text-[20px] bg-transparent " name=""
+                     placeholder="Password">
+                <p class="py-5 text-gray-200">Forget password?</p>
+                <button id="btn-login"
+                    class="w-full  py-2 border-2 border-white  tracking-widest text-[25px] border-solid rounded-full font-bold">Login</button>
+            </div>
+            <p class="pb-3 pt-0 ">Not a member? <u><a href="www.google.com" class="pl-4 text-black">SignUp</a></u></p>
+        </div>
+    </section>
+    <script>
+
+        document.getElementById('btn-login').addEventListener('click', function(){
+            const emailValue = document.getElementById('input-email').value;
+            const passwordValue = document.getElementById('input-password').value;
+            const users = 'chamon shakil rahul sabbir sabir skil cham on rul ral hul emon @gmail.com';
+            const usersPassword = 'chamon shakil rahul sabbir sabir skil cham on rul ral hul emon @gmail.com'
+            if(users.includes(emailValue) && usersPassword.includes(passwordValue)){
+               window.location.href = 'mainbank.html'
+            }
+            else{
+                alert('invalid username or password')
+            }
+         })
+
+
+    </script>
+</body>
+
+</html>
